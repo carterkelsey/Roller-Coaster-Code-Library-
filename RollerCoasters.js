@@ -1,5 +1,4 @@
 var url="http://raw.githubusercontent.com/b-mcavoy/datasets/refs/heads/main/Science/Rollercoasters.csv"
-console.log("hi")
 /* Returns a column from a csv file (at the url above) as a list. */ 
     /* Returns a column from a csv file (at the url above) as a list. */ 
     function getColumn(url, columnNumber){
