@@ -56,7 +56,7 @@ function getInversions(coasterName){
              if(inversions[i]== "Yes"){
                 /* @return{string} this statement confirming the roller coaster has "loops" or "flips" */
                 return "You will go upside down.";
-                /* @return{string} this statement states the roller coasterthe roller coaster does not have inversions   */
+                /* @return{string} this statement states the roller coaster the roller coaster does not have inversions   */
             } else{
                 return "No flips on this ride!";
         }
