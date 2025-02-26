@@ -46,7 +46,7 @@ var url="http://raw.githubusercontent.com/b-mcavoy/datasets/refs/heads/main/Scie
 
 
 /* a function that will determine if the roller coaster goes upside down or not and return the answer 
-@param coasterName {string}- is the name of a roller coaster*/ 
+@param coasterName {string}- is the name of a roller coaster 
 @return{string} the desired roller coaster 
 */
 function getInversions(coasterName){
@@ -64,17 +64,16 @@ function getInversions(coasterName){
         }
     
      }
-   
+   /* string that will return if there are no matches for coaster names */
     return "this roller Coaster does not exist";
     
     }
     /* calling the function*/ 
     console.log(getInversions("Medusa"));    
     
-/* a function that returns a list of roller coasters that are in a specific region of the world, and were made in a chosen time frames*/
-/* 
-@ param region {string} the region(location) 
-@param MinYearOpened {number} earliest value the coasters can be opened
+/* a function that returns a list of roller coasters that are in a specific region of the world, and were made in a chosen time frames
+@ param region {string}-the region(location) 
+@param MinYearOpened {number}- earliest value the coasters can be opened
 @return{list} names of suitable rides or the statement saying there were no matches
 */
 function getRegionOldCoasters(region, MinYearOpened){
@@ -96,7 +95,7 @@ function getRegionOldCoasters(region, MinYearOpened){
             /* push a  statement saying no matches were found to the list*/
             goodSafeRides.push("Error no Roller Coasters meet your standards")
         }
-        /*@return{string[]}names of suitable rides or the statement saying there were no matches */
+        /*@return{list}names of suitable rides or the statement saying there were no matches */
         return goodSafeRides;
     }
  /*calling the function*/
