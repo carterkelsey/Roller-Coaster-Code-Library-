@@ -126,3 +126,87 @@ if(country=="United States of America" || country=="United States"){
 
 /* calling the function */ 
 console.log(getCoastersInCountry("United States of America"));
+
+function getColumn(url, columnNumber){
+    var column = [];
+    var table = [];
+    var request = new XMLHttpRequest();  
+    request.open("GET", url, false);   
+    request.send(null);  
+    var csvData = new Array();
+    var jsonObject = request.responseText.split(/\r?\n|\r/);
+    for (var i = 0; i < jsonObject.length; i++) {
+      csvData.push(jsonObject[i].split(/,(?=(?:(?:[^"]*"){2})*[^"]*$)/));
+    }
+    table = csvData;
+    column = getCol(table, columnNumber);
+    return column;
+  }
+  
+  //returns the specified column from a 2D Array
+  function getCol(matrix, col){
+         var column = [];
+         for(var i=1; i<matrix.length-1; i++){
+            column.push(matrix[i][col]);
+         }
+         return column;
+      }
+
+      // The code below is getting the dataset into the code
+var url = "https://raw.githubusercontent.com/b-mcavoy/datasets/refs/heads/main/Science/Rollercoasters.csv";
+var ids = getColumn(url,0);
+var rollerCoasterNames = getColumn(url,1);
+var parkNames = getColumn(url, 2);
+var cities = getColumn(url, 3);
+var countries = getColumn(url,4);
+var regions = getColumn(url,5);
+var constructionMaterials = getColumn(url, 6);
+var heights = getColumn(url, 7);
+var speeds = getColumn(url,8);
+var lengths = getColumn(url,9);
+var numberOfInversions = getColumn(url, 10);
+var openedYears = getColumn(url, 11);
+
+
+
+function giveParkByCoaster(rollerCoasterName){
+    var tallCoasters = []// sets the variable as a list
+    for (var i=0; i < countries.length; i++){// starts a loop 
+    if((rollerCoasterNames[i].toLowerCase().includes(rollerCoasterName.toLowerCase())) || (rollerCoasterName.toLowerCase().includes(rollerCoasterNames[i].toLowerCase()))){
+       // the above code sets everything in the roller coaster names to lowercase and sees if the one on the dataset includes the one that was entered and vice-versa
+        tallCoasters.push(parkNames[i] + ", " + cities[i])// if one of the above conditions is true then it will execute this code
+   }
+  }  
+  if(tallCoasters.length > 0){// says if the list has atleast one thing in it then it will get returned
+    return tallCoasters 
+  }
+  else { // if it doesnt have anything in it then "We couldn't find that roller coaster" is returned
+    return "We couldn't find that roller coaster"
+  }
+
+ }
+// console.log(giveParkByCoaster("agrt"));
+
+
+
+
+
+function getCoastersByLength(height, speed){
+    var speedAndHeightCoasters = []// sets the variable to a list
+    for (var i=0; i < countries.length; i++){// creates a loop
+        Math.round(speeds)// lines 67-70 round everything so that the user doesn't have to deal with decimals
+        Math.round(heights)
+        Math.round(speed)
+        Math.round(height)
+        if(speeds[i] == speed && heights[i] == height){// says if the entered speed and height equal the speed and height in the dataset
+            speedAndHeightCoasters.push(rollerCoasterNames[i])// then add it to the list
+        }
+    }
+    if(speedAndHeightCoasters.length > 0){// says if the length of the list is greater than 0
+        return speedAndHeightCoasters// then return the list
+    }
+    else{// if there is nothing on the list
+        return "No Matches"// then return "No Matches"
+    }
+}
+// console.log(getCoastersByLength(8, 36));  
