@@ -37,7 +37,7 @@ The function getRegionOldCoasters() returns a list of roller coasters that are i
 **` function getRegionOldCoasters(region, MinYearOpened)`~** 
 #
 
-## Function countryToRollerCoasterNamesArray
+# Function countryToRollerCoasterNamesArray
 #
 The function getCoastersInCountry() returns the name of the roller coasters in a desired country.
 ###### @param country{string}- country name
