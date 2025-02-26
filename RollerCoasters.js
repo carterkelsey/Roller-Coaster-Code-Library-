@@ -40,6 +40,8 @@ console.log("hi")
       var inversions = getColumn(url,10);
       var numIversions = getColumn(url,11);
       var yearOpened = getColumn(url,12);
+\
+
 
 
 
@@ -128,6 +130,18 @@ if(country=="United States of America" || country=="United States"){
 console.log(getCoastersInCountry("United States of America"));
 
 
+var ids = getColumn(url,0);
+var rollerCoasterNames = getColumn(url,1);
+var parkNames = getColumn(url, 2);
+var cities = getColumn(url, 3);
+var countries = getColumn(url,4);
+var regions = getColumn(url,5);
+var constructionMaterials = getColumn(url, 6);
+var heights = getColumn(url, 7);
+var speeds = getColumn(url,8);
+var lengths = getColumn(url,9);
+var numberOfInversions = getColumn(url, 10);
+var openedYears = getColumn(url, 11);
 
 function giveParkByCoaster(rollerCoasterName){
     var tallCoasters = []// sets the variable as a list
