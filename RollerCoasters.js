@@ -127,46 +127,6 @@ if(country=="United States of America" || country=="United States"){
 /* calling the function */ 
 console.log(getCoastersInCountry("United States of America"));
 
-function getColumn(url, columnNumber){
-    var column = [];
-    var table = [];
-    var request = new XMLHttpRequest();  
-    request.open("GET", url, false);   
-    request.send(null);  
-    var csvData = new Array();
-    var jsonObject = request.responseText.split(/\r?\n|\r/);
-    for (var i = 0; i < jsonObject.length; i++) {
-      csvData.push(jsonObject[i].split(/,(?=(?:(?:[^"]*"){2})*[^"]*$)/));
-    }
-    table = csvData;
-    column = getCol(table, columnNumber);
-    return column;
-  }
-  
-  //returns the specified column from a 2D Array
-  function getCol(matrix, col){
-         var column = [];
-         for(var i=1; i<matrix.length-1; i++){
-            column.push(matrix[i][col]);
-         }
-         return column;
-      }
-
-      // The code below is getting the dataset into the code
-var url = "https://raw.githubusercontent.com/b-mcavoy/datasets/refs/heads/main/Science/Rollercoasters.csv";
-var ids = getColumn(url,0);
-var rollerCoasterNames = getColumn(url,1);
-var parkNames = getColumn(url, 2);
-var cities = getColumn(url, 3);
-var countries = getColumn(url,4);
-var regions = getColumn(url,5);
-var constructionMaterials = getColumn(url, 6);
-var heights = getColumn(url, 7);
-var speeds = getColumn(url,8);
-var lengths = getColumn(url,9);
-var numberOfInversions = getColumn(url, 10);
-var openedYears = getColumn(url, 11);
-
 
 
 function giveParkByCoaster(rollerCoasterName){
