@@ -21,8 +21,7 @@ The function getColumn() returns a single column from a csv fie as an array- the
 The function getInversion() will determine if the roller coaster goes upside down or not and return the answer.
 #
 ###### @param costerName{string}- is the name of a roller coaster
-######  @return{string}- the string returned confirms if on the roller coaster >You will go upside down< or if there will be >No flips on this ride< (success return)
-###### @return{string}- the function will return >this roller Coaster does not exist< because the desired roller coaster is not found on the list (error return)
+######  @return{string}- the string returned confirms if on the roller coaster "You will go upside down," if there will be "No flips on this ride," or that "this roller Coaster does not exist" if the coaster was not found
 **` function getInversions(coasterName)`~** 
 # 
 
@@ -32,8 +31,7 @@ The function getInversion() will determine if the roller coaster goes upside dow
 The function getRegionOldCoasters() returns a list of roller coasters that are in a specific region of the world, and were made in a chosen time frames.
 ###### @ param region{string}- the region (location) of a roller coaster
 ###### @ param MinYearOpened{number}-the earliest date (in years) the coasters can be opened
-###### @return{string}- returns a string saying >Error no roller coasters meet your standards< (error return) 
-###### @return{string[]}-names of suitable rides (success return)
+###### @return{string[]}- returns the names of suitable rides or returns a string saying "Error no roller coasters meet your standards"
 **` function getRegionOldCoasters(region, MinYearOpened)`~** 
 #
 
@@ -41,7 +39,6 @@ The function getRegionOldCoasters() returns a list of roller coasters that are i
 #
 The function getCoastersInCountry() returns the name of the roller coasters in a desired country.
 ###### @param country{string}- country name
-###### @return{string}- a string stating that no matches were found; >No roller coasters found in the specified country.< (error return)
-###### @return{string[]}- the list of roller coasters in the right location (success return)
+###### @return{string[]}- returns the list of roller coasters in the right location or a string stating that no matches were found; "No roller coasters found in the specified country."
 **`function getCoastersInCountry(country)`~** 
 #
