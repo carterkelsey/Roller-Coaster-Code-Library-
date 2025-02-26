@@ -39,7 +39,7 @@ var url="http://raw.githubusercontent.com/b-mcavoy/datasets/refs/heads/main/Scie
       var inversions = getColumn(url,10);
       var numIversions = getColumn(url,11);
       var yearOpened = getColumn(url,12);
-\
+
 
 
 
