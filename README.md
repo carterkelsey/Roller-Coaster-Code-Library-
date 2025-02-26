@@ -20,7 +20,7 @@ this function will determine if the roller coaster goes upside down or not and r
 # 
 
     
-##  AgeAndLocationToArray
+# AgeAndLocationToArray
 function that returns a list of roller coasters that are in a specific region of the world, and were made in a chosen time frames
 ###### @ param region{string}- the region(location) of a roller coaster
 ###### @ param MinYearOpened{number} the earliest date  in years the coasters can be opened
