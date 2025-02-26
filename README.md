@@ -31,7 +31,7 @@ The function getInversion() will determine if the roller coaster goes upside dow
 The function getRegionOldCoasters() returns a list of roller coasters that are in a specific region of the world, and were made in a chosen time frames.
 ###### @ param region{string}- the region (location) of a roller coaster
 ###### @ param MinYearOpened{number}-the earliest date (in years) the coasters can be opened
-###### @return{string[]}- returns the names of suitable rides or returns a string saying "error no roller coasters meet your standards"
+###### @return{list}- returns the names of suitable rides or returns a list containing a string saying "error no roller coasters meet your standards"
 **` function getRegionOldCoasters(region, MinYearOpened)`** 
 #
 
@@ -39,6 +39,6 @@ The function getRegionOldCoasters() returns a list of roller coasters that are i
 #
 The function getCoastersInCountry() returns the name of the roller coasters in a desired country.
 ###### @param country{string}- country name
-###### @return{string[]}- returns the list of roller coasters in the right location or a string stating that no matches were found; "no roller coasters found in the specified country."
+###### @return{list}- returns the list of roller coasters in the right location or the list containing a string stating that no matches were found; "no roller coasters found in the specified country."
 **`function getCoastersInCountry(country)`** 
 #
