@@ -172,6 +172,7 @@ function giveParkByCoaster(rollerCoasterName){
 
 
 function getCoastersByLength(height, speed){
+    // on data set no units for height and speed so thats why they arent included
     var speedAndHeightCoasters = []// sets the variable to a list
     for (var i=0; i < countries.length; i++){// creates a loop
         Math.round(speeds)// lines 67-70 round everything so that the user doesn't have to deal with decimals
