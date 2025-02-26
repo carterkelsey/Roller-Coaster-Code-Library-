@@ -10,6 +10,12 @@ The function getColumn() returns a single column from a csv fie as an array- the
 **`function getColumn(url, columnNumber)`**
 #
 
+##### A function to helpthat returns the specified column from a 2D Array.
+###### @param matrix {2D array} - the 2D array
+###### @param col {number} - the desired column
+###### @return column {lsit} - the desired column as a list
+**`function getCol(matrix, col)`**
+# 
 
 # RollerCoasterToInversions
 this function will determine if the roller coaster goes upside down or not and return the answer 
