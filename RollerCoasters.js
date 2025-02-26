@@ -46,7 +46,9 @@ var url="http://raw.githubusercontent.com/b-mcavoy/datasets/refs/heads/main/Scie
 
 
 /* a function that will determine if the roller coaster goes upside down or not and return the answer 
-@param {string}- is the name of a roller coaster*/ 
+@param coasterName {string}- is the name of a roller coaster*/ 
+@return{string} the desired roller coaster 
+*/
 function getInversions(coasterName){
     // the loop inside of the function starts at zero and runs until the length of the list has been traversed, and incriments by 1
     for (var i=0; i< rollerCoasterNames.length; i++){
@@ -62,7 +64,7 @@ function getInversions(coasterName){
         }
     
      }
-    /* @return{string} this error statement states the desired roller coaster is not found on the list  */
+   
     return "this roller Coaster does not exist";
     
     }
@@ -70,7 +72,11 @@ function getInversions(coasterName){
     console.log(getInversions("Medusa"));    
     
 /* a function that returns a list of roller coasters that are in a specific region of the world, and were made in a chosen time frames*/
-/* @ param{string, number} the region(location) and MinYearOpened(earliest value the coasters can be opened)*/
+/* 
+@ param region {string} the region(location) 
+@param MinYearOpened {number} earliest value the coasters can be opened
+@return{list} names of suitable rides or the statement saying there were no matches
+*/
 function getRegionOldCoasters(region, MinYearOpened){
     
     /* empty array created that the valid list of roller coasters will get pushed to*/
@@ -98,7 +104,9 @@ console.log(getRegionOldCoasters("North", 122222222))
 
 
 /* a function that returns the name of the roller coasters in a desired country
-@param{string} country name*/
+@param country {string} country name
+@return{list} the list of coasters in the right location
+*/
 function getCoastersInCountry(country){
    /* creating an empty array that the roller coasters in the right location will get pushed to and later returned */
     var rightLocationCoasters=[];
@@ -121,7 +129,7 @@ if(country=="United States of America" || country=="United States"){
         /*  push a string stating that no matches were found to the empty list */
         rightLocationCoasters.push("No roller coasters found in the specified country.");
     }
-    /* @return{string[]}the list of coasters in the right location*/
+    /* @return{list}the list of coasters in the right location*/
     return rightLocationCoasters
 }
 
