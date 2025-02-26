@@ -1,5 +1,5 @@
 var url="http://raw.githubusercontent.com/b-mcavoy/datasets/refs/heads/main/Science/Rollercoasters.csv"
-// Returns a column from a csv file (at the url above) as a list.
+/* Returns a column from a csv file (at the url above) as a list. */ 
 function getColumn(url, columnNumber){
     var column = [];
     var table = [];
