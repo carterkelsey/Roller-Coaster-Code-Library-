@@ -87,7 +87,7 @@ function getRegionOldCoasters(region, MinYearOpened){
      }
     /* if no roller coasters meet the standards... */
      if(goodSafeRides.length==0){
-            /* push a  statement saying no matches were found*/
+            /* push a  statement saying no matches were found to the list*/
             goodSafeRides.push("Error no Roller Coasters meet your standards")
         }
         /*@return{string[]}names of suitable rides or the statement saying there were no matches */
@@ -118,7 +118,7 @@ if(country=="United States of America" || country=="United States"){
     }
     /* if the list of roller coasters in the acceptable location is non existant*/
     if (rightLocationCoasters.length === 0) {
-        /* @return{string} an error no matches were found statement*/
+        /*  push a string stating that no matches were found to the empty list */
         rightLocationCoasters.push("No roller coasters found in the specified country.");
     }
     /* @return{string[]}the list of coasters in the right location*/
