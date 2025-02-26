@@ -22,7 +22,7 @@ The function getInversion() will determine if the roller coaster goes upside dow
 #
 ###### @param costerName{string}- is the name of a roller coaster
 ######  @return{string}- the string returned confirms if on the roller coaster "you will go upside down," if there will be "no flips on this ride," or that "this roller Coaster does not exist" if the coaster was not found
-**` function getInversions(coasterName)`~** 
+**` function getInversions(coasterName)`** 
 # 
 
     
@@ -32,7 +32,7 @@ The function getRegionOldCoasters() returns a list of roller coasters that are i
 ###### @ param region{string}- the region (location) of a roller coaster
 ###### @ param MinYearOpened{number}-the earliest date (in years) the coasters can be opened
 ###### @return{string[]}- returns the names of suitable rides or returns a string saying "error no roller coasters meet your standards"
-**` function getRegionOldCoasters(region, MinYearOpened)`~** 
+**` function getRegionOldCoasters(region, MinYearOpened)`** 
 #
 
 # Function countryToRollerCoasterNamesArray
@@ -40,5 +40,5 @@ The function getRegionOldCoasters() returns a list of roller coasters that are i
 The function getCoastersInCountry() returns the name of the roller coasters in a desired country.
 ###### @param country{string}- country name
 ###### @return{string[]}- returns the list of roller coasters in the right location or a string stating that no matches were found; "no roller coasters found in the specified country."
-**`function getCoastersInCountry(country)`~** 
+**`function getCoastersInCountry(country)`** 
 #
