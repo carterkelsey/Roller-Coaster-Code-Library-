@@ -47,9 +47,9 @@
 
 
 #### The function getCoasterByLength() returns a list of roller coasters that fits the desired height and speed
-#### @param height{number}- the height of the roller coaster 
-#### @param speed{number}- the speed of the roller coaster
-#### @return{list}- returns a list of roller coasters that fits the height and speed requirements or the list containing a string saying that there were no matches; "No Matches"
+##### @param height{number}- the height of the roller coaster 
+##### @param speed{number}- the speed of the roller coaster
+##### @return{list}- returns a list of roller coasters that fits the height and speed requirements or the list containing a string saying that there were no matches; "No Matches"
 **`function getCoastersByLength(height, speed){`**
 
 
