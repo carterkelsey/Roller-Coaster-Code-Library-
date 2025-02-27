@@ -149,45 +149,41 @@ var lengths = getColumn(url,9);
 var numberOfInversions = getColumn(url, 10);
 var openedYears = getColumn(url, 11);
 
+// this function takes one parameter, the roller coaster name, and reutrns the park name and city that that roller coaster is in
 function giveParkByCoaster(rollerCoasterName){
-    var tallCoasters = []// sets the variable as a list
     for (var i=0; i < countries.length; i++){// starts a loop 
-    if((rollerCoasterNames[i].toLowerCase().includes(rollerCoasterName.toLowerCase())) || (rollerCoasterName.toLowerCase().includes(rollerCoasterNames[i].toLowerCase()))){
-       // the above code sets everything in the roller coaster names to lowercase and sees if the one on the dataset includes the one that was entered and vice-versa
-        tallCoasters.push(parkNames[i] + ", " + cities[i])// if one of the above conditions is true then it will execute this code
+    if(rollerCoasterNames[i].toLowerCase()== rollerCoasterName.toLowerCase()){
+    // the above code sets everything in the roller coaster names to lowercase and sees if the roller coaster names are equal
+        return parkNames[i] + ", " + cities[i]// if one of the above conditions is true then it will execute this code
    }
   }  
-  if(tallCoasters.length > 0){// says if the list has atleast one thing in it then it will get returned
-    return tallCoasters 
-  }
-  else { // if it doesnt have anything in it then "We couldn't find that roller coaster" is returned
-    return "We couldn't find that roller coaster"
-  }
-
- }
-// console.log(giveParkByCoaster("agrt"));
+        //  if the loop runs and nothing is found return this 
+        return "We couldn't find that roller coaster"
+ 
+}
+console.log(giveParkByCoaster("Ronde des Rondins"));
 
 
 
 
 
+// this function will take two variables height and speed, and then return the roller coaster or costers that are that height and speed 
 function getCoastersByLength(height, speed){
     // on data set no units for height and speed so thats why they arent included
     var speedAndHeightCoasters = []// sets the variable to a list
     for (var i=0; i < countries.length; i++){// creates a loop
-        Math.round(speeds)// lines 67-70 round everything so that the user doesn't have to deal with decimals
-        Math.round(heights)
-        Math.round(speed)
-        Math.round(height)
-        if(speeds[i] == speed && heights[i] == height){// says if the entered speed and height equal the speed and height in the dataset
+        
+        if(Math.round(speeds[i]) == Math.round(speed) && Math.round(heights[i])== Math.round(height)){// says if the rounded version of the entered speed and height equal the rounded speed and height in the dataset
             speedAndHeightCoasters.push(rollerCoasterNames[i])// then add it to the list
         }
+          
+        
     }
-    if(speedAndHeightCoasters.length > 0){// says if the length of the list is greater than 0
-        return speedAndHeightCoasters// then return the list
+    if(speedAndHeightCoasters.length==0){// if there is nothing on the list
+        speedAndHeightCoasters.push( "No Matches")// then push "No Matches" to the empty list
     }
-    else{// if there is nothing on the list
-        return "No Matches"// then return "No Matches"
+    return speedAndHeightCoasters
+
     }
-}
-// console.log(getCoastersByLength(8, 36));  
+console.log(getCoastersByLength(3, 16));   
+
