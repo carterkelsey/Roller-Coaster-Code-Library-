@@ -36,3 +36,24 @@
 ###### @return{list}- returns the list of roller coasters in the right location or the list containing a string stating that no matches were found; "no roller coasters found in the specified country."
 **`function getCoastersInCountry(country)`** 
 #
+
+
+#### The function giveParkByCoaster() returns the name of the park and city that a roller coaster is in
+#### @param rollerCoasterName{string}- the name of the roller coaster
+#### @return{list}- returns the name of the park followed by the name of the city the roller coaster is in or returns the list with a string saying that there were no matches; "We couldn't find that roller coaster"
+**`function giveParkByCoaster(rollerCoasterName)`**
+
+
+
+
+
+#### The function giveParkByCoaster() returns a list of roller coasters that fits the desired height and speed
+#### @param height{number}- the height of the roller coaster 
+#### @param speed{number}- the speed of the roller coaster
+#### @return{list}- returns a list of roller coasters that fits the height and speed requirements or returns the list with a string saying that there were no matches; "No Matches"
+**`function getCoastersByLength(height, speed){`**
+
+
+
+
+
