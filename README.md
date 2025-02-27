@@ -47,7 +47,7 @@
 
 
 
-#### The function giveParkByCoaster() returns a list of roller coasters that fits the desired height and speed
+#### The function getCoasterByLength() returns a list of roller coasters that fits the desired height and speed
 #### @param height{number}- the height of the roller coaster 
 #### @param speed{number}- the speed of the roller coaster
 #### @return{list}- returns a list of roller coasters that fits the height and speed requirements or returns the list with a string saying that there were no matches; "No Matches"
