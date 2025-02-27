@@ -42,8 +42,7 @@
 #### @param rollerCoasterName{string}- the name of the roller coaster
 #### @return{list}- returns the name of the park followed by the name of the city the roller coaster is in or returns the list with a string saying that there were no matches; "We couldn't find that roller coaster"
 **`function giveParkByCoaster(rollerCoasterName)`**
-
-
+#
 
 
 
