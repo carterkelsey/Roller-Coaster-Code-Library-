@@ -169,7 +169,7 @@ console.log(giveParkByCoaster("Ronde des Rondins"));
 
 // this function will take two variables height and speed, and then return the roller coaster or costers that are that height and speed 
 function getCoastersByLength(height, speed){
-    // on data set no units for height and speed so thats why they arent included
+    //  height in meters, speed in miles per hour
     var speedAndHeightCoasters = []// sets the variable to a list
     for (var i=0; i < countries.length; i++){// creates a loop
         
